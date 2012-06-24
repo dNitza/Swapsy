@@ -58,15 +58,3 @@ $.swapsy = function(args) {
   unordered_items = $(options.container + ' ' + options.swapClass);
   return swapsy.order(unordered_items, options);
 };
-
-$(function() {
-  $("pre").addClass("prettyprint");
-  prettyPrint();
-  return $('.swap').click(function(e) {
-    $.swapsy({
-      container: '#swapsy',
-      direction: 'asc'
-    });
-    return e.preventDefault();
-  });
-});

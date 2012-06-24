@@ -26,14 +26,3 @@ $.swapsy = (args) ->
 	options = $.extend(defaults, args || {})		
 	unordered_items =  $(options.container+' '+options.swapClass)
 	swapsy.order(unordered_items, options)
-
-$ ->	
-	$("pre").addClass("prettyprint")
-	prettyPrint()
-	
-	$('.swap').click (e) ->
-		$.swapsy({
-			container : '#swapsy',
-			direction : 'asc'
-		})
-		e.preventDefault();
