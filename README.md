@@ -3,7 +3,7 @@ Notify
 
 Swapsy is a lightweight jQuery plugin (written in Coffee Script) to make re-ordering DOM elements a breeze.
 
-t's super easy to implement, all you need to do is include jQuery and call _$.swapsy()_ and pass in the options you want (outlines below) whenever you want to re-order elements.
+It's super easy to implement, all you need to do is include jQuery and call _$.swapsy()_ and pass in the options you want (outlines below) whenever you want to re-order elements.
 
 At the moment, Swapsy relies on the the _'data-*'_ attribute being present. You'll need to specify the order you want the elements to be put in using a data attribute.
 
