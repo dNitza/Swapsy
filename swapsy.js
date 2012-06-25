@@ -31,15 +31,15 @@ Swapsy = (function() {
   };
 
   Swapsy.prototype.order = function(unordered_items, options) {
-    var elements, index, order, _i, _j, _len, _len1;
+    var elements, index, new_order, order, _i, _j, _len, _len1;
     for (_i = 0, _len = unordered_items.length; _i < _len; _i++) {
       elements = unordered_items[_i];
       this.elements.push($(elements).data(options.order));
     }
-    order = this.eliminateDuplicates(this.elements.sort(this.compare()));
-    order = options.direction === 'asc' ? order.sort(this.compare()) : order.reverse(this.compare());
-    for (_j = 0, _len1 = order.length; _j < _len1; _j++) {
-      index = order[_j];
+    order = this.eliminateDuplicates(this.elements.sort(this.compare));
+    new_order = options.direction === 'asc' ? order.sort(this.compare) : order.reverse(this.compare);
+    for (_j = 0, _len1 = new_order.length; _j < _len1; _j++) {
+      index = new_order[_j];
       this.swapsied.push($('<div>').append($(unordered_items).closest("[data-" + options.order + "='" + index + "']").clone()).html());
     }
     $(options.container + ' ' + options.swapClass).remove();

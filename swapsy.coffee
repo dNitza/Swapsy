@@ -13,9 +13,9 @@ class Swapsy
 				
 	order: (unordered_items, options) =>
 		@elements.push $(elements).data(options.order) for elements in unordered_items
-		order = @.eliminateDuplicates(@elements.sort(@.compare()))
-		order = if options.direction == 'asc' then order.sort(@.compare()) else order.reverse(@.compare())
-		@swapsied.push $('<div>').append($(unordered_items).closest("[data-"+options.order+"='"+index+"']").clone()).html() for index in order
+		order = @.eliminateDuplicates(@elements.sort(@.compare))
+		new_order = if options.direction == 'asc' then order.sort(@.compare) else order.reverse(@.compare)
+		@swapsied.push $('<div>').append($(unordered_items).closest("[data-"+options.order+"='"+index+"']").clone()).html() for index in new_order
 		$(options.container+' '+options.swapClass).remove()
 		$(options.container)[options.location](@swapsied.join(" "))
 		
