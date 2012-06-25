@@ -48,5 +48,9 @@ The direction you want to sort in (asc or desc).
 Where you want the elements to be placed (append or prepend) 
 ######default: 'append'
 
+####order (string):
+The name of the data attribute you'd like to order by.
+######default: 'order' will get turned into 'data-order'
+
 ###Demo
 [http://www.dnitza.com/freebie/swapsy/](http://www.dnitza.com/freebie/swapsy/)
